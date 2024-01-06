@@ -1,4 +1,4 @@
-FROM openjdk
-COPY target/*.jar demo.jar
-CMD ["java","-jar","demo.jar"]
+FROM openjdk:8
+ADD target/*.jar demo.jar
+ENTRYPOINT ["java","-jar","/demo.jar"]
 EXPOSE 90
